@@ -2,10 +2,10 @@ const activity = document.querySelector('#activity-list')
 const activityBTN = document.querySelector('#activity')
 
 document.addEventListener('DOMContentLoaded', () => {
-  activityBTN.addEventListener('click', () => {
+  activityBTN.addEventListener('click', getActivity)
     //getActivity()
-    alert("I've been clicked");
-  })
+    //alert("I've been clicked");
+  //})
 })
 
 function getActivity() {
@@ -13,12 +13,10 @@ function getActivity() {
     .then(res => res.json())
     .then(data => {
       Object.values([data]).forEach(act => displayInfo(act))
-      console.log(data)
-      //return displayInfo(data)
+      //console.log(data)
+      
     })
 }
-
-
 function displayInfo(act) {
   let info = document.createElement('div')
   info.className = 'card'
