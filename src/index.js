@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const activity = document.querySelector('#activity-list')
   const activityBTN = document.querySelector('#activity')
+  const buttons = document.querySelector('#buttons')
 
   //get new activity when clicked again
   activityBTN.addEventListener('click', getActivity)
@@ -35,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create "Show More" button 
     const showMore = document.createElement('button')
-    activity.append(showMore)
+    buttons.append(showMore)
     showMore.innerText = "Show More Information"
 
     //create "Favorite" button
     const fav = document.createElement('button')
-    activity.append(fav)
+    buttons.append(fav)
     fav.innerText = "I love this!"
 
   }
