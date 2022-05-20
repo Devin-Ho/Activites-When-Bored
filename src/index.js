@@ -26,12 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Display Activity information
   function displayInfo(act) {
     activity.innerHTML = ""
-    const h2 = document.createElement('h2')
-    const div1 = document.createElement('div')
-    activity.append(h2)
-    activity.append(div1)
-    h2.innerText = act.activity
-    div1.innerText = "Participants: " + act.participants
+    const div = document.createElement('div')
+    //const div1 = document.createElement('div')
+    activity.append(div)
+    //activity.append(div1)
+    div.innerText = act.activity
+    //div1.innerText = "Participants: " + act.participants
+
+    //create "Show More" button 
+    const showMore = document.createElement('button')
+    activity.append(showMore)
+    showMore.innerText = "Show More Information"
 
     //create "Favorite" button
     const fav = document.createElement('button')
