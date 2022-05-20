@@ -3,14 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const activity = document.querySelector('#activity-list')
   const activityBTN = document.querySelector('#activity')
-  const buttons = document.querySelector('#buttons')
+  const favorite = document.querySelector('#favorites')
+  const favoriteList = document.querySelector('#favorites-list')
   const information = document.querySelector('#showInformation')
   const informationList = document.querySelector('#information-list')
 
   //get new activity when clicked again
   activityBTN.addEventListener('click', getActivity)
-  //buttons.addEventListener('click', showMoreInfo)
-  //getActivity()
   //alert("I've been clicked");
 
 
@@ -37,11 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //div1.innerText = "Participants: " + act.participants
 
     showMoreBtn(act)
-   
-    //create "Favorite" button
-    const fav = document.createElement('button')
-    buttons.append(fav)
-    fav.innerText = "I Love This!"
+    favoritesBtn(act)
 
   }
 
@@ -64,10 +59,23 @@ document.addEventListener('DOMContentLoaded', () => {
     informationList.append(li2)
     li.innerText = "Participants: " + info.participants
     li2.innerText = "Type: " + info.type
+  }
 
-    console.log(info)
+  //create favorites button
+  function favoritesBtn (favBtn) {
+    favorites.innerHTML = ""
+    const fav = document.createElement('button')
+    favorites.append(fav)
+    fav.innerText = "I Love This"
+    favorites.addEventListener('click', (e) => {
+       //showMoreInfo(info)
+       alert("I was clicked")
+    })
 
-    //alert("I've been clicked")
+  }
+
+  //save items for later 
+  function addFavorites (fav) {
 
   }
 })
