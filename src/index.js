@@ -34,45 +34,47 @@ document.addEventListener('DOMContentLoaded', () => {
     activity.append(div)
     div.innerText = act.activity
 
-    // showMoreBtn(act)
-    // favoritesBtn(act)
+
+    showMoreBtn(act)
+    favoritesBtn(act)
+    //reset(act)
 
     //create "Show More Information" button 
-    information.innerHTML = ""
-    const showMore = document.createElement('button')
-    activity.append(showMore)
-    showMore.innerText = "Show More Information"
+    // information.innerHTML = ""
+    // const showMore = document.createElement('button')
+    // activity.append(showMore)
+    // showMore.innerText = "Show More Information"
 
-    showMore.addEventListener('click', (e) => {
-      showMoreInfo(act)
-     // alert("I was clicked")
+    // showMore.addEventListener('click', (e) => {
+    //   showMoreInfo(act)
 
-    })
+    // alert("I was clicked")
 
 
-    //create "I Love This" Button" 
-    favorites.innerHTML = ""
-    const fav = document.createElement('button')
-    activity.append(fav)
-    fav.innerText = "I Love This"
-    fav.addEventListener('click', (e) => {
-      //alert("I was clicked")
-      addFavorites(act)
-      fav.disabled = true;
-    })
+
+  //create "I Love This" Button" 
+  // favorites.innerHTML = ""
+  // const fav = document.createElement('button')
+  // activity.append(fav)
+  // fav.innerText = "I Love This"
+  // fav.addEventListener('click', (e) => {
+  // //   alert("I was clicked")
+  //   addFavorites(act)
+  //   fav.disabled = true;
+  // })
+}
+
+  //create "Show More" button 
+  function showMoreBtn (info) {
+      information.innerHTML = ""
+      const showMore = document.createElement('button')
+      activity.append(showMore)
+      showMore.innerText = "Show More Information"
+      showMore.addEventListener('click', (e) => {
+         showMoreInfo(info)
+      })
 
   }
-  //create "Show More" button 
-  // function showMoreBtn (info) {
-  //     information.innerHTML = ""
-  //     const showMore = document.createElement('button')
-  //     information.append(showMore)
-  //     showMore.innerText = "Show More Information"
-  //     information.addEventListener('click', (e) => {
-  //        showMoreInfo(info)
-  //     })
-
-  // }
 
   //displays information to show more 
   function showMoreInfo(info) {
@@ -85,19 +87,24 @@ document.addEventListener('DOMContentLoaded', () => {
     li2.innerText = "Type: " + info.type
   }
 
-  //create favorites button
-  // function favoritesBtn (favBtn) {
-  //   favorites.innerHTML = ""
-  //   const fav = document.createElement('button')
-  //   favorites.append(fav)
-  //   fav.innerText = "I Love This"
-  //   favorites.addEventListener('click', (e) => {
-  //      addFavorites(favBtn)
-  //      fav.disabled = !fav.disabled;
-  // //      alert("I was clicked")
-  //   })
-
+  // function reset() {
+  //   document.querySelector("#showInformation").reset();
   // }
+  //reset();
+
+  //create favorites button
+  function favoritesBtn(favBtn) {
+    favorites.innerHTML = ""
+    const fav = document.createElement('button')
+    activity.append(fav)
+    fav.innerText = "I Love This"
+    fav.addEventListener('click', (e) => {
+      addFavorites(favBtn)
+      fav.disabled = !fav.disabled;
+      //      alert("I was clicked")
+    })
+
+  }
 
   //save items for later 
   function addFavorites(fav) {
