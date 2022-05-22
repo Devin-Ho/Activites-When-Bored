@@ -105,19 +105,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   //save items for later 
-  // function addFavorites(fav) {
-  //   const li = document.createElement('li')
-  //   favoriteList.append(li)
-  //   li.innerText = fav.activity
+  function addFavorites(fav) {
+    const li = document.createElement('li')
+    favoriteList.append(li)
+    li.innerText = fav.activity
 
-  //   //add delete button
-  //   const deleteButton = document.createElement('button')
-  //   deleteButton.textContent = ' x'
-  //   deleteButton.addEventListener('click', () => {
-  //     favoriteList.removeChild(li)
-  //     //alert("This was clicked")
-  //   })
-  //   li.append(deleteButton)
-  // }
+    //add delete button
+    const deleteButton = document.createElement('button')
+    deleteButton.textContent = ' x'
+    deleteButton.addEventListener('click', () => {
+      favoriteList.removeChild(li)
+      //alert("This was clicked")
+    })
+    li.append(deleteButton)
+  }
 })
 
