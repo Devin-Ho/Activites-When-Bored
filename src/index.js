@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const favoriteList = document.querySelector('#favorites-list')
   const information = document.querySelector('#showInformation')
   const informationList = document.querySelector('#information-list')
+  const comments = document.querySelector('#comment-form')
+  
 
   //get new activity when clicked again
   activityBTN.addEventListener('click', () => {
@@ -33,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showMoreBtn(act)
     favoritesBtn(act)
+    //createCard(act)
 
   }
 
@@ -81,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //add delete button
     const deleteButton = document.createElement('button')
-    deleteButton.textContent = ' x'
+    deleteButton.textContent = 'x'
     deleteButton.addEventListener('click', () => {
       favoriteList.removeChild(li)
     })
@@ -95,6 +98,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetID = document.querySelector('#information-list')
     resetID.innerHTML = " "
   }
+
+  //create comment button 
+  function commentSection (comment) { 
+    comments.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+    })
+
+
+  }
+  //create Activities Card
+  // function createCard(cards) {
+  //   let card = document.createElement('div')
+  //   card.className = 'card'
+  //   favoriteList.append(card)
+  //   card.innerHTML = `
+  //   <h2>${cards.activity}</h2>
+  //   <li>${cards.type}</li>
+  //   <li>${cards.participants}</li>
+  //   <p>${cards.likes}</p>
+  //   <button class="like-btn" id="${cards.id}">Like ❤️</button>`
+  //}
 })
 
 
