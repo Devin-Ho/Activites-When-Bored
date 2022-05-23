@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const informationList = document.querySelector('#information-list')
 
   //get new activity when clicked again
-  activityBTN.addEventListener('click', getActivity)
+  activityBTN.addEventListener('click', () => {
+    getActivity();
+    resetShowMe();
+  })
   //alert("I've been clicked");
 
 
@@ -119,5 +122,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     li.append(deleteButton)
   }
+
+  
+  //resetting show me more information
+  function resetShowMe () { 
+    const resetID = document.querySelector('#information-list')
+    resetID.innerHTML = " "
+    }
 })
+
 
