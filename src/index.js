@@ -13,18 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     getActivity();
     resetShowMe();
   })
-  //alert("I've been clicked");
-
-
 
 
   function getActivity() {
     fetch(`https://www.boredapi.com/api/activity`)
       .then(res => res.json())
-      .then(data => { //displayInfo(data))
+      .then(data => {
         Object.values([data]).forEach(act => displayInfo(act))
-        //console.log(data)
-        //displayInfo(data)
       })
   }
 
@@ -39,30 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showMoreBtn(act)
     favoritesBtn(act)
 
-
-    //create "Show More Information" button 
-    // information.innerHTML = ""
-    // const showMore = document.createElement('button')
-    // activity.append(showMore)
-    // showMore.innerText = "Show More Information"
-
-    // showMore.addEventListener('click', (e) => {
-    //   showMoreInfo(act)
-
-    // alert("I was clicked")
-
-
-
-    //create "I Love This" Button" 
-    // favorites.innerHTML = ""
-    // const fav = document.createElement('button')
-    // activity.append(fav)
-    // fav.innerText = "I Love This"
-    // fav.addEventListener('click', (e) => {
-    // //   alert("I was clicked")
-    //   addFavorites(act)
-    //   fav.disabled = true;
-    // })
   }
 
   //create "Show More" button 
@@ -88,11 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     li.innerText = "Participants: " + info.participants
     li2.innerText = "Type: " + info.type
   }
-
-  // function reset() {
-  //   document.querySelector("#showInformation").reset();
-  // }
-  //reset();
 
   //create favorites button
   function favoritesBtn(favBtn) {
