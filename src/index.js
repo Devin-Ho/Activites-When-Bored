@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteButton.addEventListener('click', () => {
       favoriteList.removeChild(li)
     })
+    //deleteButton.style.marginLeft = '6px';
     li.append(deleteButton)
   }
 
