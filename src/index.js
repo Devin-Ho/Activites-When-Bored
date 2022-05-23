@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const favoriteList = document.querySelector('#favorites-list')
   const information = document.querySelector('#showInformation')
   const informationList = document.querySelector('#information-list')
-  // const comments = document.querySelector('#comment-form')
-  // const commentsList = document.querySelector('#comments-list')
 
   //get new activity when clicked again
   activityBTN.addEventListener('click', () => {
@@ -35,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showMoreBtn(act)
     favoritesBtn(act)
-    //commentSection(act)
-    //createCard(act)
 
   }
 
@@ -73,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fav.addEventListener('click', (e) => {
       addFavorites(favBtn)
       fav.disabled = !fav.disabled;
-      //alert("I was clicked")
     })
   }
 
@@ -112,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
       comments.reset()
     })
   }
-
   commentSection()
 })
 
