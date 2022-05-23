@@ -80,14 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
     li.innerText = fav.activity
 
     //add delete button
-    // const deleteButton = document.createElement('button')
-    // deleteButton.textContent = ' x'
-    // deleteButton.addEventListener('click', () => {
-    //   favoriteList.removeChild(li)
-      li.addEventListener('click', () => {
-        favoriteList.removeChild(li)
+    const deleteButton = document.createElement('button')
+    deleteButton.textContent = ' x'
+    deleteButton.addEventListener('click', () => {
+      favoriteList.removeChild(li)
+      // li.addEventListener('click', () => {
+      //   favoriteList.removeChild(li)
     })
-    //li.append(deleteButton)
+    li.append(deleteButton)
   }
 
 
