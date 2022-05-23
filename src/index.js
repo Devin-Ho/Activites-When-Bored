@@ -80,21 +80,22 @@ document.addEventListener('DOMContentLoaded', () => {
     li.innerText = fav.activity
 
     //add delete button
-    const deleteButton = document.createElement('button')
-    deleteButton.textContent = ' x'
-    deleteButton.addEventListener('click', () => {
-      favoriteList.removeChild(li)
-      //alert("This was clicked")
+    // const deleteButton = document.createElement('button')
+    // deleteButton.textContent = ' x'
+    // deleteButton.addEventListener('click', () => {
+    //   favoriteList.removeChild(li)
+      li.addEventListener('click', () => {
+        favoriteList.removeChild(li)
     })
-    li.append(deleteButton)
+    //li.append(deleteButton)
   }
 
-  
+
   //resetting show me more information
-  function resetShowMe () { 
+  function resetShowMe() {
     const resetID = document.querySelector('#information-list')
     resetID.innerHTML = " "
-    }
+  }
 })
 
 
