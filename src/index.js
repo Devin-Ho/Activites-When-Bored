@@ -84,8 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteButton.textContent = ' x'
     deleteButton.addEventListener('click', () => {
       favoriteList.removeChild(li)
-      // li.addEventListener('click', () => {
-      //   favoriteList.removeChild(li)
     })
     li.append(deleteButton)
   }
