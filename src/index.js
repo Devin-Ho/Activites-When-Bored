@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   activityBTN.addEventListener('click', () => {
     getActivity();
     resetShowMe();
-    
+
   })
 
 
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
       showMoreInfo(info)
       showMore.disabled = !showMore.disabled;
     })
-
   }
 
   //displays information to show more 
@@ -74,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       addFavorites(favBtn)
       fav.disabled = !fav.disabled;
     })
+    //filterFavoritesList(favBtn)
   }
 
   //save items for later 
@@ -119,14 +119,24 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
   commentSection()
-})
 
  //filter out the activities that start with the letter
-function filterFavoritesList(event) {
-  const letter = event.target.value
-  const filteredList = listArray.filter(list => list.startsWith(letter))
-  const filteredListLis = createLiElement(filteredList)
-  favoriteList.innerHTML = " ";
-  renderLis(filteredListLis)
+// function filterFavoritesList(event) {
+//   const letter = event.target['favorites-list'].value
+//   const filteredList = listArray.filter(list => list.startsWith(letter))
+//   const filteredListLis = createLiElement(filteredList)
+//   favoriteList.innerHTML = " ";
+//   renderLis(filteredListLis)
+// }
+
+function darkMode() {
+  const element = document.body;
+  element.addEventListener('click', () => {
+    element.classList.toggle("dark-mode");
+  })
 }
+darkMode();
+
+})
+
 
