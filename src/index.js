@@ -135,6 +135,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   commentFocus.addEventListener('focus', focus)
 
+  function blur() {
+    commentFocus.style.background = "white";
+  }
+  commentFocus.addEventListener('blur', blur)
+
 })
 
 
