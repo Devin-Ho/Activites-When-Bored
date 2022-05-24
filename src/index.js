@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const informationList = document.querySelector('#information-list')
   const comments = document.querySelector('#comment-form')
   const commentsList = document.querySelector('#comments-list')
+  let listArray;
 
   //get new activity when clicked again
   activityBTN.addEventListener('click', () => {
     getActivity();
     resetShowMe();
+    
   })
 
 
@@ -116,8 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
       li.append(deleteButton)
     })
   }
-
   commentSection()
 })
 
+ //filter out the activities that start with the letter
+function filterFavoritesList(event) {
+  const letter = event.target.value
+  const filteredList = listArray.filter(list => list.startsWith(letter))
+  const filteredListLis = createLiElement(filteredList)
+  favoriteList.innerHTML = " ";
+  renderLis(filteredListLis)
+}
 
