@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const informationList = document.querySelector('#information-list')
   const comments = document.querySelector('#comment-form')
   const commentsList = document.querySelector('#comments-list')
+  const commentFocus = document.querySelector("#comment-input")
   let listArray;
 
   //get new activity when clicked again
@@ -83,14 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
     li.innerText = fav.activity
 
     //add delete button to saved items 
-      const deleteButton = document.createElement('button')
-      deleteButton.textContent = 'x'
-      deleteButton.addEventListener('click', () => {
-        favoriteList.removeChild(li)
-      })
-      deleteButton.style.marginLeft = '6px';
-      li.append(deleteButton)
-    }
+    const deleteButton = document.createElement('button')
+    deleteButton.textContent = 'x'
+    deleteButton.addEventListener('click', () => {
+      favoriteList.removeChild(li)
+    })
+    deleteButton.style.marginLeft = '6px';
+    li.append(deleteButton)
+  }
 
 
   //resetting show me more information
@@ -107,9 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
       li.innerHTML = event.target['comment-input'].value
       commentsList.append(li);
       comments.reset()
-    
-    //adding delete button to comments list
-    const deleteButton = document.createElement('button')
+
+      //adding delete button to comments list
+      const deleteButton = document.createElement('button')
       deleteButton.textContent = 'x'
       deleteButton.addEventListener('click', () => {
         commentsList.removeChild(li)
@@ -120,22 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   commentSection()
 
- //filter out the activities that start with the letter
-// function filterFavoritesList(event) {
-//   const letter = event.target['favorites-list'].value
-//   const filteredList = listArray.filter(list => list.startsWith(letter))
-//   const filteredListLis = createLiElement(filteredList)
-//   favoriteList.innerHTML = " ";
-//   renderLis(filteredListLis)
-// }
+  //filter out the activities that start with the letter
+  // function filterFavoritesList(event) {
+  //   const letter = event.target['favorites-list'].value
+  //   const filteredList = listArray.filter(list => list.startsWith(letter))
+  //   const filteredListLis = createLiElement(filteredList)
+  //   favoriteList.innerHTML = " ";
+  //   renderLis(filteredListLis)
+  // }
 
-function darkMode() {
-  const element = document.body;
-  element.addEventListener('click', () => {
-    element.classList.toggle("dark-mode");
-  })
-}
-darkMode();
+  function focus() {
+    commentFocus.style.background = 'yellow';
+  }
+  commentFocus.addEventListener('focus', focus)
 
 })
 
