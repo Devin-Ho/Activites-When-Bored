@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const favoriteList = document.querySelector('#favorites-list')
   const information = document.querySelector('#showInformation')
   const informationList = document.querySelector('#information-list')
+  const comments = document.querySelector('#comment-form')
+  const commentsList = document.querySelector('#comments-list')
 
   //get new activity when clicked again
   activityBTN.addEventListener('click', () => {
@@ -78,15 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
     favoriteList.append(li)
     li.innerText = fav.activity
 
-    //add delete button
-    const deleteButton = document.createElement('button')
-    deleteButton.textContent = 'x'
-    deleteButton.addEventListener('click', () => {
-      favoriteList.removeChild(li)
-    })
-    deleteButton.style.marginLeft = '6px';
-    li.append(deleteButton)
-  }
+    //add delete button to saved items 
+      const deleteButton = document.createElement('button')
+      deleteButton.textContent = 'x'
+      deleteButton.addEventListener('click', () => {
+        favoriteList.removeChild(li)
+      })
+      deleteButton.style.marginLeft = '6px';
+      li.append(deleteButton)
+    }
 
 
   //resetting show me more information
@@ -96,17 +98,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   //create comment button 
-  function commentSection () {  
-    const comments = document.querySelector('#comment-form')
+  function commentSection() {
     comments.addEventListener("submit", (event) => {
       event.preventDefault();
-      const commentsList = document.querySelector('#comments-list')
       const li = document.createElement('li')
-      li.innerHTML= event.target['comment-input'].value
+      li.innerHTML = event.target['comment-input'].value
       commentsList.append(li);
       comments.reset()
+    
+    //adding delete button to comments list
+    const deleteButton = document.createElement('button')
+      deleteButton.textContent = 'x'
+      deleteButton.addEventListener('click', () => {
+        commentsList.removeChild(li)
+      })
+      deleteButton.style.marginLeft = '6px';
+      li.append(deleteButton)
     })
   }
+
   commentSection()
 })
 
