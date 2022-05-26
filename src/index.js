@@ -141,34 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   commentSection()
 
-  // //filter out the activities that start with the letter
-  // function filterFavoritesList(event) {
-  //   const letter = event.target['favorites-list'].value
-  //   const filteredList = listArray.filter(list => list.startsWith(letter))
-  //   const filteredListLis = createLiElement(filteredList)
-  //   favoriteList.innerHTML = " ";
-  //   renderLis(filteredListLis)
-  // }
-
-  // function renderLis (listLis) {
-  //   listLis.forEach (element => {
-  //     renderElement(element)
-  //   })
-  // }
-
-  // function renderElement (element) {
-  //   favorites.innerHTML += element
-  // }
-
-  // function filterFavoritesList (index, letter) {
-  //   const filterName = listArray.filter(function (activity){
-  //     return activity.charAt(index) === letter;
-  //   })
-  //   return filterName;
-  // }
-
-  // dropdown.addEventListener('change', filterFavoritesList)
-
   function focus() {
     commentFocus.style.background = 'yellow';
   }
