@@ -10,14 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const comments = document.querySelector('#comment-form')
   const commentsList = document.querySelector('#comments-list')
   const commentFocus = document.querySelector("#comment-input")
-  let listArray;
+  const dropdown = document.querySelector('#list-dropdown')
+  let listArray = [];
 
   //get new activity when clicked again
   activityBTN.addEventListener('click', () => {
     getActivity();
     resetShowMe();
-
   })
+
 
 
   function getActivity() {
@@ -83,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     favoriteList.append(li)
     li.innerText = fav.activity
 
+    //alphabet(fav)
+
     //add delete button to saved items 
     const deleteButton = document.createElement('button')
     deleteButton.textContent = 'x'
@@ -92,6 +95,23 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteButton.style.marginLeft = '6px';
     li.append(deleteButton)
   }
+
+  //sort list in alpahabetical order 
+  // function alphabet (data) {
+  //   listArray = Object.values(data)
+  //   //listArray.sort(list => addFavorites(list))
+  //   const ascending = listArray.sort((a,b) => a.favoriteList.localeCompare(b.favoriteList))
+  //   return ascending 
+  // }
+
+  // function alphabet(data) {
+  //   let listArray = Object.values(data)
+  //   listArray.sort(function (a, b) {
+  //     let textA = a.favoriteList.charAt(0);
+  //     let textB = b.favoriteList.charAt(0);
+  //     return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+  //   });
+  // }
 
 
   //resetting show me more information
@@ -121,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   commentSection()
 
-  //filter out the activities that start with the letter
+  // //filter out the activities that start with the letter
   // function filterFavoritesList(event) {
   //   const letter = event.target['favorites-list'].value
   //   const filteredList = listArray.filter(list => list.startsWith(letter))
@@ -129,6 +149,25 @@ document.addEventListener('DOMContentLoaded', () => {
   //   favoriteList.innerHTML = " ";
   //   renderLis(filteredListLis)
   // }
+
+  // function renderLis (listLis) {
+  //   listLis.forEach (element => {
+  //     renderElement(element)
+  //   })
+  // }
+
+  // function renderElement (element) {
+  //   favorites.innerHTML += element
+  // }
+
+  // function filterFavoritesList (index, letter) {
+  //   const filterName = listArray.filter(function (activity){
+  //     return activity.charAt(index) === letter;
+  //   })
+  //   return filterName;
+  // }
+
+  // dropdown.addEventListener('change', filterFavoritesList)
 
   function focus() {
     commentFocus.style.background = 'yellow';
