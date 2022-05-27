@@ -21,14 +21,15 @@ Once you get an activity, two buttons will appear. A "Show More Information" but
 
 Once you click the "I Love This Button", the activity will simply appear under the Favorites section, where this is also a delete button that will delete the activity should you change your mind about it. 
 
-<img src = "images/Show-More-Information button.gif">
+<img src = "images/I-Love-This-Button.gif">
 
 Lastly, there is a comment section. Simply, add in comments for next time you do that activity. In this section, you will also be able to delete any comments, should you not need them anymore. 
 
-<img src = "images/Show-More-Information button.gif">
+<img src = "images/Comments section.gif">
 
 The comments box will also appear yellow when you click in it so you're in the comments box. Just click outside of the box, to make the yellow box go away. 
 
+<img src = "images/Focus and Blur event listeners.gif">
 
 
 
