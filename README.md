@@ -12,7 +12,7 @@ It's super simple to use!
 
 To get an acitivity all you have to do is click on the "Find Me An Activity" button. Continue clicking on "Fine Me An Activity" button until you are satisfied with the activity 
 
-//Add Find me an activity button 
+<img src = "images/Find Me An Activity Button.gif">
 
 Once you get an activity, two buttons will appear. A "Show More Information" button will tell you how many participants you need and what type of activity it is, and a "I Love This" will let you save the activity for later. 
 
