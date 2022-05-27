@@ -16,6 +16,8 @@ To get an acitivity all you have to do is click on the "Find Me An Activity" but
 
 Once you get an activity, two buttons will appear. A "Show More Information" button will tell you how many participants you need and what type of activity it is, and an "I Love This" button will let you save the activity for later. 
 
+<img src = "images/Show-More-Information button.gif">
+
 
 Once you click the "I Love This Button", the activity will simply appear under the Favorites section, where this is also a delete button that will delete the activity should you change your mind about it. 
 
