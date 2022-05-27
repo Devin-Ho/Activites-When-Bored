@@ -3,7 +3,16 @@
 ### Overview 
 This is a website for those who are bored and just need something to do. They can find a bunch of activities that can be recreational, social, entertaining, productive, etc. 
 
-### Features 
+### Get Your Own Copy 
+To get your own copy: 
+
+1. Fork this repo (https://github.com/Devin-Ho/Activites-When-Bored)
+2. Click the green 'Code' button at the top right and copy the link
+3. In your terminal, navigate to the directory in which to clone the repo
+4. Type `git clone <copied-link>` and hit enter
+5. Type `cd bored` and hit enter
+6. Run `open index.html` (if on Windows, navigate to the index.html in your File Explorer and open the file in your browser)
+
 
 
 ### How To Use 
