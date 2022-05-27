@@ -29,7 +29,7 @@ Lastly, there is a comment section. Simply, add in comments for next time you do
 
 The comments box will also appear yellow when you click in it so you're in the comments box. Just click outside of the box, to make the yellow box go away. 
 
-<img src = "images/Focus and Blur event listeners.gif">
+<img src = "images/Focus and Blur event listeners .gif">
 
 
 
