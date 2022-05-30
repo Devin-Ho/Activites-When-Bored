@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const comments = document.querySelector('#comment-form')
   const commentsList = document.querySelector('#comments-list')
   const commentFocus = document.querySelector("#comment-input")
-  const dropdown = document.querySelector('#list-dropdown')
-  let listArray = [];
 
   //get new activity when clicked again
   activityBTN.addEventListener('click', () => {
@@ -75,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
       addFavorites(favBtn)
       fav.disabled = !fav.disabled;
     })
-    //filterFavoritesList(favBtn)
   }
 
   //save items for later 
@@ -83,8 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const li = document.createElement('li')
     favoriteList.append(li)
     li.innerText = fav.activity
-
-    //alphabet(fav)
 
     //add delete button to saved items 
     const deleteButton = document.createElement('button')
@@ -95,24 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteButton.style.marginLeft = '6px';
     li.append(deleteButton)
   }
-
-  //sort list in alpahabetical order 
-  // function alphabet (data) {
-  //   listArray = Object.values(data)
-  //   //listArray.sort(list => addFavorites(list))
-  //   const ascending = listArray.sort((a,b) => a.favoriteList.localeCompare(b.favoriteList))
-  //   return ascending 
-  // }
-
-  // function alphabet(data) {
-  //   let listArray = Object.values(data)
-  //   listArray.sort(function (a, b) {
-  //     let textA = a.favoriteList.charAt(0);
-  //     let textB = b.favoriteList.charAt(0);
-  //     return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-  //   });
-  // }
-
 
   //resetting show me more information
   function resetShowMe() {
