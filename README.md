@@ -13,7 +13,7 @@ To get your own copy:
 5. Type `cd bored` and hit enter
 6. Run `open index.html` (if on Windows, navigate to the index.html in your File Explorer and open the file in your browser)
 
-You can watch a short walkthrough video of this project [here](Walkthrough Video/Phase 1 Project Video.mp4)
+You can watch a short walkthrough video of this project [here](https://drive.google.com/file/d/1h-uOnP7byno81iPWzST8WMTNm2rhoeVi/view?usp=sharing)
 
 ### How To Use 
 
