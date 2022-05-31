@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   function getActivity() {
-    fetch(`https://www.boredapi.com/api/activity`)
+    fetch(`http://www.boredapi.com/api/activity`)
       .then(res => res.json())
       .then(data => {
         Object.values([data]).forEach(act => displayInfo(act))
+        
       })
   }
 
